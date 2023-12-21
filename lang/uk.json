@@ -1,0 +1,298 @@
+{
+  "pages": {
+    "dashboard": {
+      "title": "Панель керування",
+      "balance": "Баланс",
+      "all_earned": "Зароблено",
+      "structure": "Структура",
+      "binar_structure": "Загальна структура",
+      "career": "Карьєра",
+      "info_block": {
+        "course": "Курс",
+        "freeze": "Заморожено",
+        "next_unfreeze_amount": "Розморожується",
+        "next_unfreeze_percent": "Процент разморозки",
+        "next_unfreeze_date": "Дата разморозки",
+        "bought": "Куплено",
+        "buy": "Купити",
+        "max_profit": "Максимум профіт від",
+        "binary_percent": "Бінарний процент",
+        "linear_percent": "Лінейний процент"
+      }
+    },
+    "balance": {
+      "title": "Гаманець",
+      "copy_link": "Скопіювати посиланння",
+      "my_partner_link": "Моє партнерське посилання",
+      "balance": "Баланс",
+      "available": "Доступно",
+      "structure": "Структура",
+      "invested": "Інвестовано",
+      "total": "Всього",
+      "refill": "Поповнити",
+      "in_detail": "Детально",
+      "license": "Ліцензія",
+      "upgrade_license": "Підвищити ліцензію",
+      "rang": "Ранг",
+      "next_rang": "Наступний ранг",
+      "left_1_line": "Залишилось в 1 лінії",
+      "left": "Залишилось",
+      "details_of_the_balance": "Детальна інформація про баланс",
+      "my_transactions": "Мої тразакції",
+      "details_of_your_transactions": "Детальна інформація про ваші транзакції",
+      "all_transactions": "Всі транзакції",
+      "all_investments": "Всі інвестиції",
+      "profit_partners": "Прибуток від партнерів",
+      "profit_invest": "Прибуток з інвестицій",
+      "all_profit": "Загальний прибуток",
+      "amount_all": "Оборот структури",
+      "amount_float_all": "Оборот копилки",
+      "amount_float_plus_all": "Оборот копилки+",
+      "show_all": "Показати все",
+      "next_range": "Наступний ранг",
+      "welcome": "Ласкаво просимо",
+      "income": "Дохід",
+      "lines_header": "Доступні лінії:",
+      "line1": "лінія",
+      "line2": "До наступної лінії",
+      "bon_header": "Бонус",
+      "bon_desc": "Отримуйте більше прибутку від партнерів, виконуючи план по щотижневому обороту тарифу «Стабільний».",
+      "bon_link": "Детальніше",
+      "range_text": "Оборот структури",
+      "turnover": "Дохід",
+      "price": "Ціна",
+      "freeze": "Заморожено",
+      "unfreeze": "Розморожується",
+      "next_date": "Наступна дата",
+      "convert_button": "Конвертувати",
+      "accelerates": "Прискорює",
+      "to_next_level": "До наступного рівня",
+      "buy_button": "Купити",
+      "invest_button": "Поповнити",
+      "withdraw_button": "Вивести"
+    },
+    "structure": {
+      "title": "Структура",
+      "personal": "Особиста",
+      "all_structure": "Вся структура",
+      "referral_link": "Реферальне посилання",
+      "structure_linear_title": "Лінійна Структура",
+      "structure_binar_title": "Бінарна структура",
+      "table": {
+        "participant": "Участник",
+        "email": "E-mail",
+        "telegram": "Telegram",
+        "telephone":  "Телефон",
+        "structure": "Структура",
+        "turnover": "Оборот в структурі",
+        "personal_invest": "Особисті інвестиції",
+        "view_partners": "Подивитися партнерів",
+        "earned_profit_month": "Отримати прибуток за місяць",
+        "potential_profit_month": "Можливий прибуток за місяць",
+        "earned": "Зароблено",
+        "staking": "Стейкінг"
+      }
+    },
+    "info": {
+      "title": "Інформація",
+      "career": "Кар'єра",
+      "table_structure": {
+        "title": "Назва",
+        "condition": "Умова",
+        "purchase": "Своя покупка",
+        "turnover": "Оборот меньшої ноги",
+        "income": "Дохід",
+        "income_first_line": "Дохід 1 лінія",
+        "income_binary": "Дохід бінар"
+      },
+      "table_bst": {
+        "amount": "Сумма",
+        "percent": "Процент прискорення"
+      }
+    },
+    "signup": {
+      "title": "Реєстрація",
+      "already_have_an_account": "У вас вже є аккаунт?",
+      "sign_in": "Ввійдіть",
+      "sign_up_button": "Зареєструватися",
+      "success_message": "Ви успішно зареєстровані.</br> Перевірте вашу пошту.",
+      "forgot_password": "Забули пароль?",
+      "remember_me": "Запам'ятати мене",
+      "register": "Зареєструватися",
+      "invitation_code": "Код запрошення",
+      "sign_up_to_continue": "Зареєструйтеся для продовження",
+      "text_1": "Ласкаво просимо!",
+      "text_2": "Зареєструйтеся, щоб продовжити",
+      "text_3": "Ім'я користувача",
+      "text_4": "Пароль",
+      "text_6": "Увійти",
+      "text_9": "Ваша електронна пошта",
+      "text_10": "Повторіть пароль"
+    },
+    "login": {
+      "title": "Вхід в систему",
+      "create_account": "Створити аккаунт",
+      "dont_have_an_account": "У вас немає аккаунта?",
+      "error_login": "Неверный логин или пароль",
+      "login_button": "Ввійти",
+      "forgot_password": "Забули пароль?",
+      "remember_me": "Запамятати мої данні",
+      "restore_password": "Відновити пароль",
+      "restore_password_request_success": "Лист відправлено.<br/>Будь ласка, перевірте вашу пошту.",
+      "password_was_successfully_saved": "Пароль був успішно збережений",
+      "account_successfully_confirmed": "Аккаунт успішно активований",
+      "logout": "Вийти"
+    },
+    "settings": {
+      "title": "Налаштування",
+      "save_button": "Обновити",
+      "menu": {
+        "personal_information": "Особиста інформація",
+        "change_password": "Змінити пароль",
+        "wallets": "Гаманці",
+        "two_factor_auth": "2FA"
+      },
+      "qr_instruction": "Встановіть Google Authenticator і відскануйте QR-код",
+      "2fa_enabled": "Двофактора аутентифікація успішно включена",
+      "2fa_disabled": "Двофактора аутентифікація успішно відключена",
+      "enable_2fa": "Включить двофакторну аутентифікацію",
+      "disable_2fa": "Виключити двофакторну аутентифікацію",
+      "level": "рівень"
+    }
+  },
+  "menu": {
+    "home": "Головна",
+    "balance": "Баланс",
+    "structure": "Структура",
+    "info": "Інформація",
+    "support": "Підтримка"
+  },
+  "forms": {
+    "type": "Введіть",
+    "data_saved_successfully": "Дані успішно збережені.",
+    "data_saved_unsuccessfully": "Помилка відправки форми",
+    "error_validate_form": "Помилка створення. Перевірте всі поля",
+    "yours_balance": "Ваш баланс",
+    "top_up": "Поповнити",
+    "add_bonus": "Додати % з BONUS",
+    "validity": "Термін дії",
+    "be_accumulated": "Буде накопичено за 365 днів",
+    "user": {
+      "email": {
+        "name": "email",
+        "placeholder": "Введите email",
+        "error_label": "email",
+        "label": "Ваш email"
+      },
+      "full_name": {
+        "placeholder": "Введіть Прізвище Ім'я",
+        "error_label": "Прізвище Ім'я",
+        "label": "Прізвище Ім'я"
+      },
+      "username": {
+        "placeholder": "Введіть ім'я користувача",
+        "error_label": "ім'я користувача",
+        "label": "Будь ласка, введіть ім'я користувача"
+      },
+      "first_name": {
+        "placeholder": "Введіть Ім'я",
+        "error_label": "Ім'я",
+        "label": "Ім'я"
+      },
+      "last_name": {
+        "placeholder": "Введіть Прізвище",
+        "error_label": "Прізвище",
+        "label": "Прізвище"
+      },
+      "patronymic": {
+        "placeholder": "Введіть по-батькові",
+        "error_label": "По-батькові",
+        "label": "По-батькові"
+      },
+      "surname": {
+        "placeholder": "Введіть Прізвище",
+        "error_label": "Прізвище",
+        "label": "Прізвище"
+      },
+      "name": {
+        "placeholder": "Введіть Ім'я",
+        "error_label": "Ім'я",
+        "label": "Ім'я"
+      },
+      "invite_code": {
+        "placeholder": "Введіть Код підтвердження",
+        "error_label": "Код підтвердження",
+        "label": "Код підтвердження"
+      },
+      "login": {
+        "placeholder": "Введіть Логін",
+        "error_label": "Логін",
+        "label": "Логін"
+      },
+      "password": {
+        "placeholder": "Введіть Пароль",
+        "error_label": "Пароль",
+        "label": "Пароль"
+      },
+      "new_password": {
+        "placeholder": "Повторіть пароль",
+        "error_label": "Новий пароль",
+        "label": "Новий пароль"
+      },
+      "repeat_password": {
+        "placeholder": "Повторіть пароль",
+        "error_label": "Повторіть пароль",
+        "label": "Повторіть пароль"
+      },
+      "phone": {
+        "placeholder": "+380223334455",
+        "error_label": "Напишіть номер без пропусків і з знаком \"+\" . Приклад: +380223334455",
+        "label": "Номер телефону"
+      },
+      "2fa": {
+        "placeholder": "Введіте 6 цифр",
+        "error_label": "код",
+        "label": ""
+      }
+    },
+    "wallet": {
+      "placeholder": "Введіть адресу гаманця"
+    }
+  },
+  "errors": {
+    "unknown_error": "Невідома помилка."
+  },
+  "ok": "OK",
+  "close": "Закрити",
+  "save": "Зберегти",
+  "confirm": "Підтвердити",
+  "cancel": "Відмінити",
+  "loading": "Завантаження ...",
+  "loading_error": "Помилка завантаження",
+  "copy": "Копіювати",
+  "copy_ref_link": "Пригласити друга",
+  "success_copy": "Успішно скопійовано",
+  "error_copy": "Помилка копіювання",
+  "to_home_page": "На главну",
+  "2_step_verification": "Двоетапна верифікація",
+  "enter_the_code": "Введіть код з Google authenticator",
+  "select_dates": "Вибрати дати",
+  "dividend_chart": "Графік дивідендів",
+  "monthly_dividend_chart": "Графік дивідендів за місяцями",
+  "range": {
+    "range_0": "-",
+    "range_1": "Чушпан",
+    "range_2": "Шелуха",
+    "range_3": "Мотальщик",
+    "range_4": "Супера",
+    "range_5": "Старшак",
+    "range_6": "Старик",
+    "range_7": "Авторитет"
+  },
+  "today": "Сьогодні",
+  "week": "Тиждень",
+  "month": "Місяць",
+  "empty": "ПУСТО",
+  "tech_work": "Технічні работи",
+  "detail": "Детально"
+}

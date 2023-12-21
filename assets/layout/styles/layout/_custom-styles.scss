@@ -1,0 +1,48 @@
+
+.pi-button{
+    .pi-button-icon-left,.pi-button-icon-right{
+        margin-top: -4px;
+        position: relative;
+    }
+}
+
+.card{
+    @media all and (max-width: 768px){
+        padding: 15px
+    }
+}
+
+.p-dataview .p-dataview-header{
+    border:none;
+}
+.balance-block{
+    display: flex;
+
+    .pi{
+        margin-right: 10px;
+    }
+}
+
+.lang-switcher{
+    width:80px;
+    .p-dropdown-label{
+        text-transform:uppercase;
+    }
+}
+
+.short-dotted{
+   overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+
+.pi{
+    &.circle{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+    }
+}

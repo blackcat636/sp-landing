@@ -1,0 +1,636 @@
+//var
+
+$prefix: '' !default;
+$separator: '\\:' !default;
+
+$sm: 576px !default;
+$md: 768px !default;
+$lg: 992px !default;
+$xl: 1200px !default;
+$xxl: 1600px !default;
+$gutter: 24px !default;
+
+$fieldMargin: 1rem !default;
+$fieldLabelMargin: .5rem !default;
+$helperTextMargin: .25rem !default;
+
+$spacer: 1rem !default;
+
+$breakpoints: (
+        'sm': $sm,
+        'md': $md,
+        'lg': $lg,
+        'xl': $xl,
+        'xxl': $xxl
+) !default;
+
+//mixins
+
+
+@use 'sass:math';
+
+@mixin style-class($prop, $map, $responsive: false, $states: false) {
+    @each $key, $val in $map {
+        .#{$prefix}#{$key} {
+            #{$prop}: #{$val} !important;
+        }
+    }
+
+    @if ($states) {
+        @each $key, $val in $map {
+            .focus#{$separator} {
+                &#{$prefix}#{$key}:focus {
+                    #{$prop}: #{$val} !important;
+                }
+            }
+
+            .hover#{$separator} {
+                &#{$prefix}#{$key}:hover {
+                    #{$prop}: #{$val} !important;
+                }
+            }
+
+            .active#{$separator} {
+                &#{$prefix}#{$key}:active {
+                    #{$prop}: #{$val} !important;
+                }
+            }
+        }
+    }
+
+    @if ($responsive) {
+        @each $key, $val in $breakpoints {
+            @media screen and (min-width: #{$val}) {
+                .#{$key + $separator} {
+                    @each $key, $val in $map {
+                        &#{$prefix}#{$key} {
+                            #{$prop}: #{$val} !important;
+                        }
+                    }
+
+                    @if ($states) {
+                        @each $key, $val in $map {
+                            &focus#{$separator} {
+                                &#{$prefix}#{$key}:focus {
+                                    #{$prop}: #{$val} !important;
+                                }
+                            }
+
+                            &hover#{$separator} {
+                                &#{$prefix}#{$key}:hover {
+                                    #{$prop}: #{$val} !important;
+                                }
+                            }
+
+                            &active#{$separator} {
+                                &#{$prefix}#{$key}:active {
+                                    #{$prop}: #{$val} !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin color-class($name, $prop, $colors, $shades) {
+    @each $color in $colors {
+        .#{$prefix}#{$name}#{$color} {
+            @each $shade in $shades {
+                &-#{$shade} {
+                    #{$prop}: var(--#{$color}-#{$shade}) !important;
+                }
+            }
+        }
+
+        .focus#{$separator} {
+            &#{$prefix}#{$name}#{$color} {
+                @each $shade in $shades {
+                    &-#{$shade}:focus {
+                        #{$prop}: var(--#{$color}-#{$shade}) !important;
+                    }
+                }
+            }
+        }
+
+        .hover#{$separator} {
+            &#{$prefix}#{$name}#{$color} {
+                @each $shade in $shades {
+                    &-#{$shade}:hover {
+                        #{$prop}: var(--#{$color}-#{$shade}) !important;
+                    }
+                }
+            }
+        }
+
+        .active#{$separator} {
+            &#{$prefix}#{$name}#{$color} {
+                @each $shade in $shades {
+                    &-#{$shade}:active {
+                        #{$prop}: var(--#{$color}-#{$shade}) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin surface-class($name, $prop, $shades) {
+    @each $shade in $shades {
+        .#{$prefix}#{$name}-#{$shade} {
+            #{$prop}: var(--surface-#{$shade}) !important;
+        }
+    }
+
+    @each $shade in $shades {
+        .focus#{$separator} {
+            &#{$prefix}#{$name}-#{$shade}:focus {
+                #{$prop}: var(--surface-#{$shade}) !important;
+            }
+        }
+
+        .hover#{$separator} {
+            &#{$prefix}#{$name}-#{$shade}:hover {
+                #{$prop}: var(--surface-#{$shade}) !important;
+            }
+        }
+
+        .active#{$separator} {
+            &#{$prefix}#{$name}-#{$shade}:active {
+                #{$prop}: var(--surface-#{$shade}) !important;
+            }
+        }
+    }
+}
+
+@mixin border-class($name, $directions, $scales) {
+    @each $dir, $prop in $directions {
+        @for $i from 0 through length($scales) - 1 {
+            $borderValue: if($i == 0, 'none', $i);
+            $className: #{$name}-#{$dir}-#{$borderValue};
+            @if ($dir == '') {
+                $className: #{$name}-#{$borderValue};
+            }
+
+            .#{$prefix}#{$className} {
+                @each $propName in $prop {
+                    #{$propName}-width: nth($scales, $i + 1) !important;
+                    #{$propName}-style: if($i == 0, none, solid);
+                }
+            }
+        }
+    }
+
+    @each $key, $val in $breakpoints {
+        @media screen and (min-width: #{$val}) {
+            .#{$key + $separator} {
+                @each $dir, $prop in $directions {
+                    @for $i from 0 through length($scales) - 1 {
+                        $borderValue: if($i == 0, 'none', $i);
+                        $className: #{$name}-#{$dir}-#{$borderValue};
+                        @if ($dir == '') {
+                            $className: #{$name}-#{$borderValue};
+                        }
+
+                        &#{$prefix}#{$className} {
+                            @each $propName in $prop {
+                                #{$propName}-width: nth($scales, $i + 1) !important;
+                                #{$propName}-style: if($i == 0, none, solid);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin border-radius-class($map, $directions) {
+    @each $key, $val in $map {
+        $prefixName: $key;
+        $suffixName: '';
+        $index: str-index($key, 'border-round');
+
+        @if $index != null {
+            $prefixName: 'border-round';
+            $suffixName: str-slice($key, str-length('border-round') + 1, str-length($key));
+        }
+
+        @each $dir, $prop in $directions {
+            .#{$prefix}#{$prefixName}-#{$dir}#{$suffixName} {
+                @each $propName in $prop {
+                    #{$propName}: #{$val} !important;
+                }
+            }
+        }
+    }
+
+    @each $key, $val in $breakpoints {
+        @media screen and (min-width: #{$val}) {
+            .#{$key + $separator} {
+                @each $key, $val in $map {
+                    $prefixName: $key;
+                    $suffixName: '';
+                    $index: str-index($key, 'border-round');
+
+                    @if $index != null {
+                        $prefixName: 'border-round';
+                        $suffixName: str-slice($key, str-length('border-round') + 1, str-length($key));
+                    }
+
+                    @each $dir, $prop in $directions {
+                        &#{$prefix}#{$prefixName}-#{$dir}#{$suffixName} {
+                            @each $propName in $prop {
+                                #{$propName}: #{$val} !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin rgba-color-class($name, $prop, $colors, $shades) {
+    @each $colorName, $colorValue in $colors {
+        .#{$prefix}#{$name}#{$colorName}-alpha {
+            @each $shade in $shades {
+                &-#{$shade} {
+                    #{$prop}: #{"rgba(#{$colorValue},#{math.div($shade, 100)})"} !important;
+                }
+            }
+        }
+
+        .hover#{$separator} {
+            &#{$prefix}#{$name}#{$colorName}-alpha {
+                @each $shade in $shades {
+                    &-#{$shade}:hover {
+                        #{$prop}: #{"rgba(#{$colorValue},#{math.div($shade, 100)})"} !important;
+                    }
+                }
+            }
+        }
+
+        .focus#{$separator} {
+            &#{$prefix}#{$name}#{$colorName}-alpha {
+                @each $shade in $shades {
+                    &-#{$shade}:focus {
+                        #{$prop}: #{"rgba(#{$colorValue},#{math.div($shade, 100)})"} !important;
+                    }
+                }
+            }
+        }
+
+        .active#{$separator} {
+            &#{$prefix}#{$name}#{$colorName}-alpha {
+                @each $shade in $shades {
+                    &-#{$shade}:active {
+                        #{$prop}: #{"rgba(#{$colorValue},#{math.div($shade, 100)})"} !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin spacing-class($inPrefix, $map, $scales, $responsive: true, $auto: false, $negative: false) {
+    $inPrefix: $prefix + $inPrefix;
+
+    @each $name, $prop in $map {
+        @for $i from 0 through length($scales) - 1 {
+            .#{$inPrefix}#{$name}-#{$i} {
+                @each $propName in $prop {
+                    #{$propName}: $spacer * nth($scales, $i + 1) !important;
+                }
+            }
+        }
+
+        @if ($negative) {
+            @for $i from 1 through length($scales) - 1 {
+                .-#{$inPrefix}#{$name}-#{$i} {
+                    @each $propName in $prop {
+                        #{$propName}: -1 * $spacer * nth($scales, $i + 1) !important;
+                    }
+                }
+            }
+        }
+
+        @if ($auto) {
+            .#{$inPrefix}#{$name}-auto {
+                @each $propName in $prop {
+                    #{$propName}: auto !important;
+                }
+            }
+        }
+    }
+
+    @if ($responsive) {
+        @each $key, $val in $breakpoints {
+            @media screen and (min-width: #{$val}) {
+                @each $name, $prop in $map {
+                    @for $i from 0 through length($scales) - 1 {
+                        .#{$key + $separator}#{$inPrefix}#{$name}-#{$i} {
+                            @each $propName in $prop {
+                                #{$propName}: $spacer * nth($scales, $i + 1) !important;;
+                            }
+                        }
+                    }
+
+                    @if ($negative) {
+                        @for $i from 1 through length($scales) - 1 {
+                            .#{$key + $separator}-#{$inPrefix}#{$name}-#{$i} {
+                                @each $propName in $prop {
+                                    #{$propName}: -1 * $spacer * nth($scales, $i + 1) !important;
+                                }
+                            }
+                        }
+                    }
+
+                    @if ($auto) {
+                        .#{$key + $separator}#{$inPrefix}#{$name}-auto {
+                            @each $propName in $prop {
+                                #{$propName}: auto !important;;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin generate-class($map, $responsive: false, $states: false) {
+    @each $name, $propMap in $map {
+        .#{$prefix}#{$name} {
+            @each $prop, $val in $propMap {
+                #{$prop}: #{$val} !important;
+            }
+        }
+    }
+
+    @if ($states) {
+        @each $name, $propMap in $map {
+            .focus#{$separator} {
+                &#{$prefix}#{$name}:focus {
+                    @each $prop, $val in $propMap {
+                        #{$prop}: #{$val} !important;
+                    }
+                }
+            }
+
+            .hover#{$separator} {
+                &#{$prefix}#{$name}:hover {
+                    @each $prop, $val in $propMap {
+                        #{$prop}: #{$val} !important;
+                    }
+                }
+            }
+
+            .active#{$separator} {
+                &#{$prefix}#{$name}:active {
+                    @each $prop, $val in $propMap {
+                        #{$prop}: #{$val} !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @if ($responsive) {
+        @each $key, $val in $breakpoints {
+            @media screen and (min-width: #{$val}) {
+                .#{$key + $separator} {
+                    @each $name, $propMap in $map {
+                        &#{$prefix}#{$name} {
+                            @each $prop, $val in $propMap {
+                                #{$prop}: #{$val} !important;
+                            }
+                        }
+                    }
+
+                    @if ($states) {
+                        @each $name, $propMap in $map {
+                            &focus#{$separator} {
+                                &#{$prefix}#{$name}:focus {
+                                    @each $prop, $val in $propMap {
+                                        #{$prop}: #{$val} !important;
+                                    }
+                                }
+                            }
+
+                            &hover#{$separator} {
+                                &#{$prefix}#{$name}:hover {
+                                    @each $prop, $val in $propMap {
+                                        #{$prop}: #{$val} !important;
+                                    }
+                                }
+                            }
+
+                            &active#{$separator} {
+                                &#{$prefix}#{$name}:active {
+                                    @each $prop, $val in $propMap {
+                                        #{$prop}: #{$val} !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//grid
+
+.#{$prefix}grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -1 * $gutter;
+    margin-left: -1 * $gutter;
+    margin-top: -1 * $gutter;
+}
+
+.#{$prefix}grid > #{$prefix}.col,
+.#{$prefix}grid > [class*="#{$prefix}col"] {
+    box-sizing: border-box;
+}
+
+.#{$prefix}grid-nogutter {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.#{$prefix}grid-nogutter > .#{$prefix}col,
+.#{$prefix}grid-nogutter > [class*="#{$prefix}col-"] {
+    padding: 0;
+}
+
+.#{$prefix}col {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: $gutter;
+}
+
+.#{$prefix}col-fixed {
+    flex: 0 0 auto;
+    padding: $gutter;
+}
+
+$grid-columns: (
+    "col-1": 8.3333%,
+    "col-2": 16.6667%,
+    "col-3": 25%,
+    "col-4": 33.3333%,
+    "col-5": 41.6667%,
+    "col-6": 50%,
+    "col-7": 58.3333%,
+    "col-8": 66.6667%,
+    "col-9": 75%,
+    "col-10": 83.3333%,
+    "col-11": 91.6667%,
+    "col-12": 100%
+) !default;
+
+$grid-column-offsets: (
+    "col-offset-0": 0,
+    "col-offset-1": 8.3333%,
+    "col-offset-2": 16.6667%,
+    "col-offset-3": 25%,
+    "col-offset-4": 33.3333%,
+    "col-offset-5": 41.6667%,
+    "col-offset-6": 50%,
+    "col-offset-7": 58.3333%,
+    "col-offset-8": 66.6667%,
+    "col-offset-9": 75%,
+    "col-offset-10": 83.3333%,
+    "col-offset-11": 91.6667%,
+    "col-offset-12": 100%,
+) !default;
+
+@each $col,$width in $grid-columns {
+    .#{$prefix}#{$col} {
+        flex: 0 0 auto;
+        padding: $gutter;
+        width: #{$width};
+    }
+}
+
+@each $key, $val in $breakpoints {
+    @media screen and (min-width: #{$val}) {
+        .#{$key + $separator} {
+            &#{$prefix}col {
+                flex-grow: 1;
+                flex-basis: 0;
+                padding: $gutter;
+            }
+            
+            &#{$prefix}col-fixed {
+                flex: 0 0 auto;
+                padding: $gutter;
+            }
+
+            @each $col, $width in $grid-columns {
+                &#{$prefix}#{$col} {
+                    flex: 0 0 auto;
+                    padding: $gutter;
+                    width: #{$width};
+                }
+            }
+        }
+    }
+}
+
+@include style-class('margin-left', $grid-column-offsets, true);
+
+
+//tiphografy
+
+$text-align-props: (
+        'text-center': center,
+        'text-justify': justify,
+        'text-left': left,
+        'text-right': right
+) !default;
+
+$text-decoration-props: (
+        'underline': underline,
+        'line-through': line-through,
+        'no-underline': none
+) !default;
+
+$text-transform-props: (
+        'lowercase': lowercase,
+        'uppercase': uppercase,
+        'capitalize': capitalize
+) !default;
+
+$text-overflow-props: (
+        'text-overflow-clip': clip,
+        'text-overflow-ellipsis': ellipsis
+) !default;
+
+$font-weight-props: (
+        'font-light': 300,
+        'font-normal': 400,
+        'font-medium': 500,
+        'font-semibold': 600,
+        'font-bold': 700
+) !default;
+
+$font-style-props: (
+        'font-italic': italic
+) !default;
+
+$font-size-props: (
+        'text-xs': 10.5px,
+        'text-sm': 12.25px,
+        'text-base': 14px,
+        'text-lg': 15.75px,
+        'text-xl': 17.5px,
+        'text-2xl': 21px,
+        'text-3xl': 24.5px,
+        'text-4xl': 28px,
+        'text-5xl': 35px,
+        'text-6xl': 42px,
+        'text-7xl': 56px,
+        'text-8xl': 84px
+) !default;
+
+$line-height-props: (
+        'line-height-1': 1,
+        'line-height-2': 1.25,
+        'line-height-3': 1.5,
+        'line-height-4': 2
+) !default;
+
+$white-space-props: (
+        'white-space-normal': normal,
+        'white-space-nowrap': nowrap
+) !default;
+
+$vertical-align-props: (
+        'vertical-align-baseline': baseline,
+        'vertical-align-top': top,
+        'vertical-align-middle': middle,
+        'vertical-align-bottom': bottom,
+        'vertical-align-text-top': text-top,
+        'vertical-align-text-bottom': text-bottom,
+        'vertical-align-sub': sub,
+        'vertical-align-super': super
+) !default;
+
+@include style-class('text-align', $text-align-props, true);
+@include style-class('text-decoration', $text-decoration-props, false, true);
+@include style-class('text-transform', $text-transform-props);
+@include style-class('text-overflow', $text-overflow-props, true);
+@include style-class('font-weight', $font-weight-props, true);
+@include style-class('font-style', $font-style-props);
+@include style-class('font-size', $font-size-props, true);
+@include style-class('line-height', $line-height-props);
+@include style-class('white-space', $white-space-props);
+@include style-class('vertical-align', $vertical-align-props, true);
