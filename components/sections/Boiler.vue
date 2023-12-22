@@ -14,15 +14,12 @@ export default {
 <style>
 .boiler {
   color: transparent;
-  font-family: "Molot-Regular", Helvetica;
+  font-family: Molot;
   font-size: 48px;
   font-weight: 400;
   left: 20px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 2643px;
-  width: 560px;
 }
 
 .boiler .text-wrapper-6 {

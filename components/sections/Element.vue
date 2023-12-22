@@ -20,15 +20,13 @@ export default {
 
 <style>
 .element {
-  color: transparent;
-  font-family: "Molot-Regular", Helvetica;
-  font-size: 64px;
-  font-weight: 400;
-  left: 169px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 1071px;
+    color: #A44343;
+    font-family: Molot;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  
 }
 
 .element .text-wrapper-18 {

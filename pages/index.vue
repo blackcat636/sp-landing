@@ -12,265 +12,217 @@ import FrameWrapper from "../components/sections/FrameWrapper.vue";
 import Frame from "../components/sections/Frame.vue";
 
 definePageMeta({
-  layout: 'custom'
+    layout: 'custom'
 })
 </script>
 <template>
-  <div class="frame-screen">
-    <div class="frame-2">
-      <overlap />
-      <div class="overlap-6">
-        <img class="image-7" alt="Image" src="/img/image-26.png" />
-        <img class="image-8" alt="Image" src="/img/image-23.png" />
-      </div>
-      <overlap-group />
-      <img class="image-9" alt="Image" src="/img/image-5.png" />
-      <overlap-wrapper />
-      <boiler/>
-      <boiler-booster/>
-      <overlap-group-wrapper />
-      <div class="text-wrapper-23">авторитет</div>
-      <p class="text-wrapper-24">
-        Наш основной токен называется Boiler(BLR). Благодаря его алгоритму каждый имеет возможность зарабатывать
-        ежедневно прямо сейчас. BLR растет каждый день от 1% до 25% в зависимости от пропорции ввода и вывода активов
-        участниками.
-      </p>
-      <p class="text-wrapper-25">
-        После покупки BLR он размораживается с определенной скоростью скоростью от 1% до 3,5% . Данная скорость
-        зависит от наличия у участника нашего второго токена под названием booster(BST). Подробнее (ссылка на
-        презентацию)
-      </p>
-      <div class="text-wrapper-26">Ранг</div>
-      <img class="group-6" alt="Group" src="/img/group.png" />
-      <Frame />
-      <div class="text-wrapper-27">о проекте</div>
-      <group />
-      <group-wrapper />
-      <div class="vector-wrapper">
-        <img class="vector-5" alt="Vector" src="/img/vector-5.svg" />
-      </div>
-      <div class="group-7">
-        <div class="overlap-group-3">
-          <div class="text-wrapper-28">регистрация</div>
+    <div class="main">
+        <div class="container">
+            <overlap-wrapper />
+            
+            <div class="flex reg-enter-block">
+                <a href="/" class="lang-button red">
+                    регистрация
+                </a>
+                <a href="/" class="lang-button blue">
+                    вход
+                </a>
+            </div>
+            
+            <img class="band-img img-responsive" src="/img/image-5.png" />
+            
+            <div class="flex align-items-stretch">
+                <svg class="svg-stat" width="125" height="208" viewBox="0 0 125 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="26.3944" width="98.6056" height="208" fill="#A44343"/>
+                    <rect x="12.4502" width="10.9562" height="208" fill="#A44343"/>
+                    <rect x="4.98007" width="4.48207" height="208" fill="#A44343"/>
+                    <rect width="1.99203" height="208" fill="#A44343"/>
+                </svg>
+                
+                <element/>
+                
+                <div class="imgs-7-block hidden lg:block">
+                    <img class="image-7" alt="Image" src="/img/image-26.png" />
+                    <img class="image-8" alt="Image" src="/img/image-23.png" />
+                </div>
+                
+            </div>
+            
+            <overlap-group/>
+            
+            <div class="about-project">
+                <div class="flex align-items-center header-molot">
+                    <group />
+                    <div class="">о проекте</div>
+                </div>
+                
+                
+                <div class="project-blocks flex flex-wrap align-items-stretch">
+                    <div class="flex flex-column lg:col-6 col-12 justify-content-center">
+                        <boiler/>
+                        <p class="text-regular-column">
+                            Наш основной токен называется Boiler(BLR). Благодаря его алгоритму каждый имеет возможность зарабатывать
+                            ежедневно прямо сейчас. BLR растет каждый день от 1% до 25% в зависимости от пропорции ввода и вывода активов
+                            участниками.
+                        </p>
+                        <Frame />
+                    </div>
+                    <div class="lg:col-6 col-12">
+                        <img class="img-responsive" alt="Group" src="/img/Group.svg" />
+                    </div>
+                    
+                    <div class="lg:col-6 col-12"><overlap /></div>
+                    
+                    <div class="lg:col-6 col-12 flex flex-column justify-content-center">
+                        <boiler-booster/>
+                        
+                        <p class="text-regular-column">
+                            После покупки BLR он размораживается с определенной скоростью скоростью от 1% до 3,5% . Данная скорость
+                            зависит от наличия у участника нашего второго токена под названием booster(BST). Подробнее (ссылка на
+                            презентацию)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="avtoritet">
+                <overlap-group-wrapper />
+            </div>
+            
+            <div class="bottom-block">
+                <div class="col-9">
+                    <div class="bottom-block_text">зарабатывайте уже сейчас</div>
+                    <div class="flex reg-enter-block">
+                        <a href="/" class="lang-button blue">
+                            регистрация
+                        </a>
+                        <a href="/" class="lang-button white">
+                            вход
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="group-8">
-        <div class="overlap-7">
-          <div class="text-wrapper-29">вход</div>
-        </div>
-      </div>
-      <element />
-      <frame-wrapper />
-      <div class="frame-3" />
     </div>
-  </div>
 </template>
 <style>
-.frame-screen {
-  background-color: #1b1f1d;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+.main{
+    padding:57px 0;
+    display:flex;
+    justify-content:center;
+    .container{
+        padding:0 16px;
+        @media all and (min-width: 1200px){
+            width:1200px
+        }
+    }
 }
 
-.frame-screen .frame-2 {
-  background-color: #1b1f1d;
-  height: 5661px;
-  position: relative;
-  width: 1200px;
+.reg-enter-block{
+    margin-top:7px;
+    margin-bottom:32px;
+ }
+
+.lang-button{
+    padding:18px 60px;
+    color: #FFF;
+    text-align: center;
+    font-family: Molot;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+    margin-right:18px;
+    &:last-child{
+        margin-right:0;
+    }
+    
+    &.red{
+        background: #A44343;
+    }
+    &.blue{
+        background: #55A4A6;
+    }
+    &.white{
+        background: #fff;
+        color:#A44343;
+    }
 }
 
-.frame-screen .overlap-6 {
-  height: 282px;
-  left: 769px;
-  position: absolute;
-  top: 1089px;
-  width: 411px;
+.band-img{
+    margin-bottom:115px;
 }
 
-.frame-screen .image-7 {
-  height: 274px;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 411px;
+.imgs-7-block{
+    max-width: 411px;
+    width:100%;
+    position:relative;
+    top:13px;
+    img{
+        position:absolute;
+        top:0;
+        bottom:0;
+        height:100%;
+        right:0;
+    }
 }
 
-.frame-screen .image-8 {
-  background-blend-mode: color-dodge;
-  height: 282px;
-  left: 288px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 123px;
+.svg-stat{
+    margin-top:11px;
+    margin-right:24px;
 }
 
-.frame-screen .image-9 {
-  height: 631px;
-  left: 23px;
-  position: absolute;
-  top: 326px;
-  width: 1157px;
+
+.header-molot {
+    color: #FFFBDC;
+    font-family: Molot;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+    
+    margin-bottom:54px;
 }
 
-.frame-screen .text-wrapper-23 {
-  color: #a34343;
-  font-family: "Molot-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 985px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 3885px;
-  white-space: nowrap;
+.project-blocks {
+
+}
+.img-responsive{
+    width:100%;
+    height:auto;
 }
 
-.frame-screen .text-wrapper-24 {
-  color: #a4a4a0;
-  font-family: var(--2-font-family);
-  font-size: var(--2-font-size);
-  font-style: var(--2-font-style);
-  font-weight: var(--2-font-weight);
-  left: 20px;
-  letter-spacing: var(--2-letter-spacing);
-  line-height: var(--2-line-height);
-  position: absolute;
-  top: 2779px;
-  width: 625px;
-}
-.frame-screen .text-wrapper-25 {
-  color: #a4a4a0;
-  font-family: var(--2-font-family);
-  font-size: var(--2-font-size);
-  font-style: var(--2-font-style);
-  font-weight: var(--2-font-weight);
-  left: 610px;
-  letter-spacing: var(--2-letter-spacing);
-  line-height: var(--2-line-height);
-  position: absolute;
-  top: 3496px;
-  width: 560px;
-}
-
-.frame-screen .text-wrapper-26 {
-  color: #fffbdc;
-  font-family: "Century-Regular", Helvetica;
-  font-size: 18px;
-  font-weight: 400;
-  left: 989px;
-  letter-spacing: 0;
-  line-height: 23.4px;
-  position: absolute;
-  top: 3862px;
-  white-space: nowrap;
-}
-
-.frame-screen .group-6 {
-  height: 547px;
-  left: 682px;
-  position: absolute;
-  top: 2580px;
-  width: 498px;
-}
-
-.frame-screen .text-wrapper-27 {
-  color: #fffbdc;
-  font-family: "Molot-Regular", Helvetica;
-  font-size: 96px;
-  font-weight: 400;
-  left: 165px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 2412px;
-  white-space: nowrap;
-}
-
-.frame-screen .vector-wrapper {
-  background-color: #a34343;
-  height: 120px;
-  left: 20px;
-  position: absolute;
-  top: 2972px;
-  width: 104px;
-}
-
-.frame-screen .vector-5 {
-  height: 75px;
-  left: 16px;
-  position: absolute;
-  top: 24px;
-  width: 73px;
-}
-
-.frame-screen .group-7 {
-  height: 64px;
-  left: 23px;
-  position: absolute;
-  top: 230px;
-  width: 276px;
-}
-
-.frame-screen .overlap-group-3 {
-  background-color: #a34343;
-  height: 64px;
-  position: relative;
-  width: 274px;
-}
-
-.frame-screen .text-wrapper-28 {
-  color: #ffffff;
-  font-family: "Molot-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 61px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 18px;
-  white-space: nowrap;
-}
-
-.frame-screen .group-8 {
-  height: 64px;
-  left: 313px;
-  position: absolute;
-  top: 230px;
-  width: 182px;
-}
-
-.frame-screen .overlap-7 {
-  background-color: #54a3a5;
-  height: 64px;
-  position: relative;
-  width: 180px;
-}
-
-.frame-screen .text-wrapper-29 {
-  color: #ffffff;
-  font-family: "Molot-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 60px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 18px;
-  white-space: nowrap;
-}
-
-.frame-screen .frame-3 {
-  background-color: #000000;
-  height: 512px;
-  left: 0;
-  position: absolute;
-  top: 5149px;
-  width: 1200px;
+.bottom-block {
+    background: #A44343;
+    padding:25px;
+    margin-top:150px;
+    position:relative;
+    
+    @media all and (min-width: 1200px) {
+        &:after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: url("/img/group.png") center no-repeat;
+            width: 387px;
+            height: 405px;
+            
+            bottom: 0;
+            right: 0;
+        }
+    }
+    .bottom-block_text{
+        color: #FFFBDC;
+        font-family: Molot;
+        font-size: 96px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @media all and (max-width: 991px){
+            font-size: 36px;
+        }
+    }
 }
 </style>

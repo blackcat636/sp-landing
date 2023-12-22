@@ -20,9 +20,6 @@ export default {
   left: 610px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 3360px;
-  width: 560px;
 }
 
 .boiler-booster .text-wrapper-8 {

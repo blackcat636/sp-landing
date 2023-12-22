@@ -18,10 +18,8 @@ export default {
 <style>
 .overlap {
   height: 554px;
-  left: 22px;
-  position: absolute;
-  top: 3242px;
-  width: 561px;
+  position: relative;
+  max-width: 561px;
 }
 
 .overlap .vector {

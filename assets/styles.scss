@@ -6,8 +6,75 @@
 @import '@/assets/demo/styles/flags/flags.css';
 @import '@/assets/demo/styles/badges.scss';
 @import "grid";
+@font-face {
+  font-family: Molot;
+  src: url("/fonts/molot.regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Century;
+  src: url("/fonts/957-font.ttf") format("opentype");
+}
 
-$mel_color : #BA68C8;
+$mel_color : #A44343;
+$bace-bg:#1B201D;
+
+body{
+  background: #1B201D;
+}
+
+
+//landing styles
+  .text-molot{
+    color: #A44343;
+    font-family: Molot;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &.small-font{
+      color: #FFFBDC;
+      font-family: Molot;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 48px */
+    }
+
+    &.blue{
+      color: #55A4A6;
+    }
+    &.white{
+      color: #FFFBDC;
+    }
+  }
+
+
+  .text-regular{
+    color: #FFFBDC;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: Century;
+    text-align:left;
+  }
+
+  .text-regular-column{
+    color: #A5A4A1;
+    font-family: Century;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 31.2px */
+  }
+
+
+
+                  //landing styles
+
+
 
 :root{
   --white:#ffffff;
