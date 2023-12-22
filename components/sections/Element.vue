@@ -31,6 +31,7 @@ export default {
 
 .element .text-wrapper-18 {
   color: #fffbdc;
+    white-space:nowrap;
 }
 
 .element .text-wrapper-19 {

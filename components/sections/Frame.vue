@@ -38,15 +38,12 @@ export default {
 }
 
 .frame .text-wrapper-16 {
-    color: #fffbdb;
-    font-family: "Molot-Regular", Helvetica;
+    color: #FFFBDC;
+    font-family: Molot;
     font-size: 32px;
+    font-style: normal;
     font-weight: 400;
-    letter-spacing: 0;
-    line-height: 32px;
-    margin-top: -8px;
-    white-space: nowrap;
-    width: fit-content;
+    line-height: 100%; /* 32px */
 }
 
 .frame .text-wrapper-17 {

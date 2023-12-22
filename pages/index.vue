@@ -18,21 +18,25 @@ definePageMeta({
 <template>
     <div class="main">
         <div class="container">
-            <overlap-wrapper />
+            <div class="col-12">
+                <overlap-wrapper />
+            </div>
             
-            <div class="flex reg-enter-block">
-                <a href="/" class="lang-button red">
+            <div class="flex reg-enter-block col-12">
+                <a href="https://cabinet.slovopacana.pro/signup" class="lang-button red">
                     регистрация
                 </a>
-                <a href="/" class="lang-button blue">
+                <a href="https://cabinet.slovopacana.pro/login" class="lang-button blue">
                     вход
                 </a>
             </div>
             
-            <img class="band-img img-responsive" src="/img/image-5.png" />
+            <div class="col-12">
+                <img class="band-img img-responsive" src="/img/image-5.png" />
+            </div>
             
-            <div class="flex align-items-stretch">
-                <svg class="svg-stat" width="125" height="208" viewBox="0 0 125 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="flex align-items-stretch col-12 mb-80">
+                <svg class="svg-stat flex-shrink-0" width="125" height="208" viewBox="0 0 125 208" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="26.3944" width="98.6056" height="208" fill="#A44343"/>
                     <rect x="12.4502" width="10.9562" height="208" fill="#A44343"/>
                     <rect x="4.98007" width="4.48207" height="208" fill="#A44343"/>
@@ -51,7 +55,7 @@ definePageMeta({
             <overlap-group/>
             
             <div class="about-project">
-                <div class="flex align-items-center header-molot">
+                <div class="flex align-items-center header-molot col-12">
                     <group />
                     <div class="">о проекте</div>
                 </div>
@@ -60,7 +64,7 @@ definePageMeta({
                 <div class="project-blocks flex flex-wrap align-items-stretch">
                     <div class="flex flex-column lg:col-6 col-12 justify-content-center">
                         <boiler/>
-                        <p class="text-regular-column">
+                        <p class="text-regular-column mb-37">
                             Наш основной токен называется Boiler(BLR). Благодаря его алгоритму каждый имеет возможность зарабатывать
                             ежедневно прямо сейчас. BLR растет каждый день от 1% до 25% в зависимости от пропорции ввода и вывода активов
                             участниками.
@@ -106,8 +110,15 @@ definePageMeta({
     </div>
 </template>
 <style>
+
+.mb-37{
+    margin-bottom:37px;
+    @media all and (max-width: 991px) {
+        margin-bottom:20px;
+    }
+}
 .main{
-    padding:57px 0;
+    padding:57px 0 0;
     display:flex;
     justify-content:center;
     .container{

@@ -13,13 +13,12 @@ export default {
 
 <style>
 .boiler-booster {
-  color: transparent;
-  font-family: "Molot-Regular", Helvetica;
-  font-size: 48px;
-  font-weight: 400;
-  left: 610px;
-  letter-spacing: 0;
-  line-height: normal;
+    color: transparent;
+    font-family: Molot;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
 }
 
 .boiler-booster .text-wrapper-8 {

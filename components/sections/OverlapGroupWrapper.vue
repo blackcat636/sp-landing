@@ -10,16 +10,16 @@
         </div>
         
         <div class="col-12 lg:col-6 relative">
-            <div class="text-wrapper-11">супера</div>
-            <div class="text-wrapper-12">чушпан</div>
-            <div class="text-wrapper-14">авторитет</div>
+            <div class="text-wrapper-11 molot-text">супера</div>
+            <div class="text-wrapper-12 molot-text">чушпан</div>
+            <div class="text-wrapper-14 molot-text">авторитет</div>
             <div class="overlap-2">
-                
                 <img class="mask-group" alt="Mask group" src="/img/mask-group-2.png" />
                 <img class="mask-group-2" alt="Mask group" src="/img/mask-group-1.png" />
                 <img class="mask-group-3" alt="Mask group" src="/img/mask-group.png" />
                 <div class="rectangle" />
             </div>
+            <div class="text-wrapper-12">Ранг</div>
             <div class="text-wrapper-14">Ранг</div>
             <div class="text-wrapper-15">Ранг</div>
         </div>
@@ -38,6 +38,9 @@ export default {
     height: 544px;
     position: relative;
     width: 100%;
+    
+    
+    margin-top:80px
 }
 
 .overlap-group-wrapper .text-wrapper-10 {
@@ -51,28 +54,47 @@ export default {
 
 .overlap-group-wrapper .text-wrapper-11 {
     color: #fffbdc;
-    font-family: "Molot-Regular", Helvetica;
+    font-family: "Century-Regular", Helvetica;
     font-size: 24px;
     font-weight: 400;
-    left: 200px;
+    left: 40px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
     top: 60px;
     white-space: nowrap;
+    &.molot-text{
+        top:80px;
+        color: #fffbdc;
+        font-family: Molot;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
 
 .overlap-group-wrapper .text-wrapper-12 {
-    color: #fffbdc36;
-    font-family: "Molot-Regular", Helvetica;
+    color: #FFFBDC;
+    font-family: "Century-Regular", Helvetica;
     font-size: 16px;
     font-weight: 400;
-    left: 160px;
+    left: 200px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 92px;
+    top: 72px;
     white-space: nowrap;
+    width:80px;
+    &.molot-text{
+        top:92px;
+        color: rgba(255, 251, 220, 0.21);
+        font-family: Molot;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
 
 .overlap-group-wrapper .overlap-2 {
@@ -85,7 +107,7 @@ export default {
 
 .overlap-group-wrapper .mask-group {
     height: 389px;
-    left: 222px;
+    left: 183px;
     position: absolute;
     top: 124px;
     width: 183px;
@@ -101,7 +123,7 @@ export default {
 
 .overlap-group-wrapper .mask-group-3 {
     height: 544px;
-    left: 360px;
+    right: 0;
     position: absolute;
     top: 0;
     width: 228px;
@@ -122,12 +144,23 @@ export default {
     font-family: "Century-Regular", Helvetica;
     font-size: 18px;
     font-weight: 400;
-    left: 360px;
+    right: 121px;
     letter-spacing: 0;
     line-height: 23.4px;
     position: absolute;
-    top: 33px;
+    top: -57px;
     white-space: nowrap;
+    width:100px;
+    
+    &.molot-text{
+        top:-37px;
+        color: #A44343;
+        font-family: Molot;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
 
 .overlap-group-wrapper .text-wrapper-15 {
@@ -135,11 +168,11 @@ export default {
     font-family: "Century-Regular", Helvetica;
     font-size: 18px;
     font-weight: 400;
-    left: 200px;
+    left: 40px;
     letter-spacing: 0;
     line-height: 23.4px;
     position: absolute;
-    top: 65px;
+    top: 60px;
     white-space: nowrap;
 }
 </style>
