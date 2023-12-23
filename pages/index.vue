@@ -22,7 +22,7 @@ definePageMeta({
                 <overlap-wrapper />
             </div>
             
-            <div class="flex reg-enter-block col-12">
+            <div class="flex flex-wrap reg-enter-block col-12">
                 <a href="https://cabinet.slovopacana.pro/signup" class="lang-button red">
                     регистрация
                 </a>
@@ -94,9 +94,9 @@ definePageMeta({
             </div>
             
             <div class="bottom-block">
-                <div class="col-9">
+                <div class="lg:col-9 col-12 ">
                     <div class="bottom-block_text">зарабатывайте уже сейчас</div>
-                    <div class="flex reg-enter-block">
+                    <div class="flex reg-enter-block flex-wrap">
                         <a href="https://cabinet.slovopacana.pro/signup" class="lang-button blue">
                             регистрация
                         </a>
@@ -132,6 +132,12 @@ definePageMeta({
 .reg-enter-block{
     margin-top:7px;
     margin-bottom:32px;
+    >a{
+        margin-bottom:16px;
+        @media all and (max-width: 991px) {
+            width:100%;
+        }
+    }
  }
 
 .lang-button{
@@ -148,6 +154,10 @@ definePageMeta({
     &:last-child{
         margin-right:0;
     }
+    @media all and (max-width: 991px) {
+        margin-right:0;
+    }
+    
     
     &.red{
         background: #A44343;
@@ -192,7 +202,9 @@ definePageMeta({
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    
+    @media all and (max-width: 991px) {
+        font-size:60px;
+    }
     
     margin-bottom:54px;
 }

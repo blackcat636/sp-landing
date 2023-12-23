@@ -26,6 +26,10 @@ export default {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    
+    @media all and (max-width: 991px) {
+        font-size:24px;
+    }
   
 }
 

@@ -74,6 +74,7 @@ export default {
         opacity:0.4;
         left:24px;
         top:0;
+        width: calc(100% - 48px);
     }
 }
 
