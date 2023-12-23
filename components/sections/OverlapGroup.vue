@@ -48,6 +48,10 @@ export default {
 
 .overlap-group{
     margin-bottom:250px;
+    
+    @media all and (max-width: 991px) {
+        margin-bottom:20px;
+    }
     position:relative;
     
     .image{

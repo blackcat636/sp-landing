@@ -19,6 +19,10 @@ export default {
     font-weight: 400;
     letter-spacing: 0;
     line-height: normal;
+    @media all and (max-width: 991px) {
+        font-size: 32px;
+        margin-top:20px
+    }
 }
 
 .boiler-booster .text-wrapper-8 {

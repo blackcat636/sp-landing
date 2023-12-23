@@ -36,7 +36,7 @@ definePageMeta({
             </div>
             
             <div class="flex align-items-stretch col-12 mb-80">
-                <svg class="svg-stat flex-shrink-0" width="125" height="208" viewBox="0 0 125 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="hidden lg:block svg-stat flex-shrink-0" width="125" height="208" viewBox="0 0 125 208" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="26.3944" width="98.6056" height="208" fill="#A44343"/>
                     <rect x="12.4502" width="10.9562" height="208" fill="#A44343"/>
                     <rect x="4.98007" width="4.48207" height="208" fill="#A44343"/>
@@ -71,11 +71,11 @@ definePageMeta({
                         </p>
                         <Frame />
                     </div>
-                    <div class="lg:col-6 col-12">
+                    <div class="lg:col-6 col-12 hidden lg:block">
                         <img class="img-responsive" alt="Group" src="/img/Group.svg" />
                     </div>
                     
-                    <div class="lg:col-6 col-12"><overlap /></div>
+                    <div class="lg:col-6 col-12 hidden lg:block"><overlap /></div>
                     
                     <div class="lg:col-6 col-12 flex flex-column justify-content-center">
                         <boiler-booster/>
@@ -203,7 +203,7 @@ definePageMeta({
     font-weight: 400;
     line-height: normal;
     @media all and (max-width: 991px) {
-        font-size:60px;
+        font-size:48px;
     }
     
     margin-bottom:54px;
@@ -222,6 +222,10 @@ definePageMeta({
     padding:25px;
     margin-top:150px;
     position:relative;
+    
+    @media all and (max-width: 991px) {
+        margin-top:0px;
+    }
     
     @media all and (min-width: 1200px) {
         &:after {

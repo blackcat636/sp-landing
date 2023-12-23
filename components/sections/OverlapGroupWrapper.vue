@@ -9,7 +9,7 @@
             </p>
         </div>
         
-        <div class="col-12 lg:col-6 relative">
+        <div class="col-12 lg:col-6 relative hidden lg:block">
             <div class="text-wrapper-11 molot-text">супера</div>
             <div class="text-wrapper-12 molot-text">чушпан</div>
             <div class="text-wrapper-14 molot-text">авторитет</div>
