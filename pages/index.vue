@@ -97,10 +97,10 @@ definePageMeta({
                 <div class="col-9">
                     <div class="bottom-block_text">зарабатывайте уже сейчас</div>
                     <div class="flex reg-enter-block">
-                        <a href="/" class="lang-button blue">
+                        <a href="https://cabinet.slovopacana.pro/signup" class="lang-button blue">
                             регистрация
                         </a>
-                        <a href="/" class="lang-button white">
+                        <a href="https://cabinet.slovopacana.pro/login" class="lang-button white">
                             вход
                         </a>
                     </div>
