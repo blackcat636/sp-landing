@@ -1,27 +1,25 @@
 <template>
     <div class="overlap-group-wrapper flex flex-wrap">
         <div class="col-12 lg:col-6">
-            <div class="text-wrapper-10">поднимайтесь по иерархии</div>
+            <div class="text-wrapper-10">{{ $t('pages.landing.text_16') }}</div>
             <p class="text-regular-column">
-                Иерархия Слово пацана это народный проект , в котором каждый имеет возможность занять свою роль и зарабатывать
-                столько, сколько пожелает. Ты можешь вырасти благодаря нашей программе от простого пацана до авторитета и при
-                этом получить существенную прибыль.
+                {{ $t('pages.landing.text_17') }}
             </p>
         </div>
         
         <div class="col-12 lg:col-6 relative hidden lg:block">
-            <div class="text-wrapper-11 molot-text">супера</div>
-            <div class="text-wrapper-12 molot-text">чушпан</div>
-            <div class="text-wrapper-14 molot-text">авторитет</div>
+            <div class="text-wrapper-11 molot-text">{{ $t('pages.landing.text_18') }}</div>
+            <div class="text-wrapper-12 molot-text">{{ $t('pages.landing.text_19') }}</div>
+            <div class="text-wrapper-14 molot-text">{{ $t('pages.landing.text_20') }}</div>
             <div class="overlap-2">
                 <img class="mask-group" alt="Mask group" src="/img/mask-group-2.png" />
                 <img class="mask-group-2" alt="Mask group" src="/img/mask-group-1.png" />
                 <img class="mask-group-3" alt="Mask group" src="/img/mask-group.png" />
                 <div class="rectangle" />
             </div>
-            <div class="text-wrapper-12">Ранг</div>
-            <div class="text-wrapper-14">Ранг</div>
-            <div class="text-wrapper-15">Ранг</div>
+            <div class="text-wrapper-12">{{ $t('pages.landing.text_21') }}</div>
+            <div class="text-wrapper-14">{{ $t('pages.landing.text_21') }}</div>
+            <div class="text-wrapper-15">{{ $t('pages.landing.text_21') }}</div>
         </div>
         
     </div>

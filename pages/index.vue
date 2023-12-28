@@ -24,10 +24,10 @@ definePageMeta({
             
             <div class="flex flex-wrap reg-enter-block col-12">
                 <a href="https://cabinet.slovopacana.pro/signup" class="lang-button red">
-                    регистрация
+                    {{ $t('pages.landing.text_3') }}
                 </a>
                 <a href="https://cabinet.slovopacana.pro/login" class="lang-button blue">
-                    вход
+                    {{ $t('pages.landing.text_4') }}
                 </a>
             </div>
             
@@ -57,7 +57,7 @@ definePageMeta({
             <div class="about-project">
                 <div class="flex align-items-center header-molot col-12">
                     <group />
-                    <div class="">о проекте</div>
+                    <div class="">{{ $t('pages.landing.text_5') }}</div>
                 </div>
                 
                 
@@ -65,9 +65,7 @@ definePageMeta({
                     <div class="flex flex-column lg:col-6 col-12 justify-content-center">
                         <boiler/>
                         <p class="text-regular-column mb-37">
-                            Наш основной токен называется Boiler(BLR). Благодаря его алгоритму каждый имеет возможность зарабатывать
-                            ежедневно прямо сейчас. BLR растет каждый день от 1% до 25% в зависимости от пропорции ввода и вывода активов
-                            участниками.
+                            {{ $t('pages.landing.text_14') }}
                         </p>
                         <Frame />
                     </div>
@@ -81,9 +79,7 @@ definePageMeta({
                         <boiler-booster/>
                         
                         <p class="text-regular-column">
-                            После покупки BLR он размораживается с определенной скоростью скоростью от 1% до 3,5% . Данная скорость
-                            зависит от наличия у участника нашего второго токена под названием booster(BST). Подробнее (ссылка на
-                            презентацию)
+                            {{ $t('pages.landing.text_15') }}
                         </p>
                     </div>
                 </div>
@@ -95,13 +91,13 @@ definePageMeta({
             
             <div class="bottom-block">
                 <div class="lg:col-9 col-12 ">
-                    <div class="bottom-block_text">зарабатывайте уже сейчас</div>
+                    <div class="bottom-block_text">{{ $t('pages.landing.text_22') }}</div>
                     <div class="flex reg-enter-block flex-wrap">
                         <a href="https://cabinet.slovopacana.pro/signup" class="lang-button blue">
-                            регистрация
+                            {{ $t('pages.landing.text_3') }}
                         </a>
                         <a href="https://cabinet.slovopacana.pro/login" class="lang-button white">
-                            вход
+                            {{ $t('pages.landing.text_4') }}
                         </a>
                     </div>
                 </div>

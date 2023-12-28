@@ -1,7 +1,7 @@
 <template>
   <p class="boiler">
-    <span class="text-wrapper-6">зарабатывайте, </span>
-    <span class="text-wrapper-7">покупая boiler</span>
+    <span class="text-wrapper-6">{{ $t('pages.landing.text_23') }}, </span>
+    <span class="text-wrapper-7">{{ $t('pages.landing.text_24') }} boiler</span>
   </p>
 </template>
 

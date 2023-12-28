@@ -7,9 +7,7 @@ export default {
 <template>
     <div class="overlap-group flex flex-wrap">
         <div class="text-regular-column lg:col-6 col-12 mb-110">
-            В современном мире стало слишком много нечестных проектов. Обманщики обещают, что человек сможет заработать, но в
-            конечном итоге проект закрывается и люди теряют деньги. Создатели таких проектов словно напёрсточники, которые не
-            остановятся ни перед чем, чтобы забрать ваши кровные.
+            {{ $t('pages.landing.text_6') }}
         </div>
         
         <div class="img-overlay lg:col-6 col-12 mb-110">
@@ -24,18 +22,16 @@ export default {
         
         <div class="lg:col-6 col-12 flex flex-column flex-order-1 lg:flex-order-2">
             <div class="text-regular-column">
-                Мы хотим изменить эту статистику и взяли громкое название. Все знают, что если даёшь слово пацана — разбейся на
-                куски, но выполни то, что обещал. Поэтому мы создали этот проект и обещаем, что любой человек может здесь
-                заработать и каждый со своей скоростью.
+                {{ $t('pages.landing.text_7') }}
             </div>
             
             <p class="div-2">
                 <span class="text-molot small-font white">
-                у нас КАЖДЫЙ
+                {{ $t('pages.landing.text_11') }}
                 <br />
-                МОЖЕТ ЧЕСТНО
+                {{ $t('pages.landing.text_12') }}
                 </span>
-                <span class="text-molot small-font blue">ЗАРАБАТЫВАТЬ</span>
+                <span class="text-molot small-font blue">{{ $t('pages.landing.text_13') }}</span>
             </p>
         </div>
         

@@ -1,13 +1,13 @@
 <template>
   <p class="element">
     <span class="text-wrapper-18">
-      по статистике,
+      {{ $t('pages.landing.text_8') }},
       <br />
     </span>
-    <span class="text-wrapper-19">99% проектов</span>
+    <span class="text-wrapper-19">{{ $t('pages.landing.text_9') }}</span>
     <span class="text-wrapper-18">
       <br />
-      являются скамом
+      {{ $t('pages.landing.text_10') }}
     </span>
   </p>
 </template>

@@ -1,8 +1,8 @@
 <template>
     <div class="frame">
-        <div class="text-wrapper-16">до 25% в день</div>
+        <div class="text-wrapper-16">{{ $t('pages.landing.text_25') }}</div>
         <p class="text-wrapper-17">
-            Токен boiler растёт от 1 до 25% в день. Рост зависит от транзакций всех участников проекта.
+            {{ $t('pages.landing.text_26') }}
         </p>
     </div>
 </template>

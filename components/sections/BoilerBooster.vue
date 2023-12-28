@@ -1,7 +1,7 @@
 <template>
   <p class="boiler-booster">
-    <span class="text-wrapper-8">ускоряйте boiler, </span>
-    <span class="text-wrapper-9">покупая booster</span>
+    <span class="text-wrapper-8">{{ $t('pages.landing.text_27') }} boiler, </span>
+    <span class="text-wrapper-9">{{ $t('pages.landing.text_24') }} booster</span>
   </p>
 </template>
 
