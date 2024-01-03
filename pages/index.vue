@@ -10,6 +10,18 @@ import GroupWrapper from "../components/sections/GroupWrapper.vue";
 import Element from "../components/sections/Element.vue";
 import FrameWrapper from "../components/sections/FrameWrapper.vue";
 import Frame from "../components/sections/Frame.vue";
+import { ref } from 'vue';
+
+const { locale,setLocale,availableLocales } = useI18n()
+const localeModel = ref();
+const localesDropdown = ref([
+    { name: 'EN', code: 'en' },
+    { name: 'RU', code: 'ru' },
+]);
+
+const changeLocale = (lang) => {
+    setLocale(lang);
+}
 
 definePageMeta({
     layout: 'custom'
@@ -19,6 +31,11 @@ definePageMeta({
     <div class="main">
         <div class="container">
             <div class="col-12">
+               
+                <div class="flex justify-content-end lg:justify-content-between  flex-wrap lg:flex-nowrap">
+                    <div class="text-regular flex-order-2 lg:flex-order-1">{{ $t('pages.landing.text_1') }}</div>
+                    <Dropdown @change="changeLocale(localeModel.code)" v-model="localeModel" :options="localesDropdown" optionLabel="name" :placeholder="locale.toUpperCase()" class="lang-switcher flex-order-1 lg:flex-order-2" />
+                </div>
                 <overlap-wrapper />
             </div>
 
@@ -106,6 +123,29 @@ definePageMeta({
     </div>
 </template>
 <style>
+.lang-switcher{
+    color:#ffffff;
+    display: flex;
+    align-items: center;
+    font-family: Molot;
+    .p-dropdown-label{
+        text-align:center;
+        max-width:25px;
+    }
+}
+
+.p-dropdown-items{
+    padding:16px;
+    background: #A44343;
+    color:#ffffff;
+    font-family: Molot;
+    li{
+        margin-bottom:5px;
+        &:last-of-type{
+            margin-bottom:0;
+        }
+    }
+}
 
 .mb-37{
     margin-bottom:37px;
@@ -115,6 +155,9 @@ definePageMeta({
 }
 .main{
     padding:57px 0 0;
+    @media all and (max-width: 991px) {
+        padding-top:20px;
+    }
     justify-content:center;
 
     @media all and (min-width: 991px) {
