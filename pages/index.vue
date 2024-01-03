@@ -21,7 +21,7 @@ definePageMeta({
             <div class="col-12">
                 <overlap-wrapper />
             </div>
-            
+
             <div class="flex flex-wrap reg-enter-block col-12">
                 <a href="https://cabinet.slovopacana.pro/signup" class="lang-button red">
                     {{ $t('pages.landing.text_3') }}
@@ -30,11 +30,11 @@ definePageMeta({
                     {{ $t('pages.landing.text_4') }}
                 </a>
             </div>
-            
+
             <div class="col-12">
                 <img class="band-img img-responsive" src="/img/image-5.png" />
             </div>
-            
+
             <div class="flex align-items-stretch col-12 mb-80">
                 <svg class="hidden lg:block svg-stat flex-shrink-0" width="125" height="208" viewBox="0 0 125 208" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="26.3944" width="98.6056" height="208" fill="#A44343"/>
@@ -42,25 +42,25 @@ definePageMeta({
                     <rect x="4.98007" width="4.48207" height="208" fill="#A44343"/>
                     <rect width="1.99203" height="208" fill="#A44343"/>
                 </svg>
-                
+
                 <element/>
-                
+
                 <div class="imgs-7-block hidden lg:block">
                     <img class="image-7" alt="Image" src="/img/image-26.png" />
                     <img class="image-8" alt="Image" src="/img/image-23.png" />
                 </div>
-                
+
             </div>
-            
+
             <overlap-group/>
-            
+
             <div class="about-project">
                 <div class="flex align-items-center header-molot col-12">
                     <group />
                     <div class="">{{ $t('pages.landing.text_5') }}</div>
                 </div>
-                
-                
+
+
                 <div class="project-blocks flex flex-wrap align-items-stretch">
                     <div class="flex flex-column lg:col-6 col-12 justify-content-center">
                         <boiler/>
@@ -72,23 +72,23 @@ definePageMeta({
                     <div class="lg:col-6 col-12 hidden lg:block">
                         <img class="img-responsive" alt="Group" src="/img/Group.svg" />
                     </div>
-                    
+
                     <div class="lg:col-6 col-12 hidden lg:block"><overlap /></div>
-                    
+
                     <div class="lg:col-6 col-12 flex flex-column justify-content-center">
                         <boiler-booster/>
-                        
+
                         <p class="text-regular-column">
                             {{ $t('pages.landing.text_15') }}
                         </p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="avtoritet">
                 <overlap-group-wrapper />
             </div>
-            
+
             <div class="bottom-block">
                 <div class="lg:col-9 col-12 ">
                     <div class="bottom-block_text">{{ $t('pages.landing.text_22') }}</div>
@@ -115,12 +115,15 @@ definePageMeta({
 }
 .main{
     padding:57px 0 0;
-    display:flex;
     justify-content:center;
+
+    @media all and (min-width: 991px) {
+      display:flex;
+    }
     .container{
         padding:0 16px;
         @media all and (min-width: 1200px){
-            width:1200px
+            width:1200px;
         }
     }
 }
@@ -145,7 +148,7 @@ definePageMeta({
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    
+
     margin-right:18px;
     &:last-child{
         margin-right:0;
@@ -153,8 +156,8 @@ definePageMeta({
     @media all and (max-width: 991px) {
         margin-right:0;
     }
-    
-    
+
+
     &.red{
         background: #A44343;
     }
@@ -201,7 +204,7 @@ definePageMeta({
     @media all and (max-width: 991px) {
         font-size:48px;
     }
-    
+
     margin-bottom:54px;
 }
 
@@ -218,11 +221,11 @@ definePageMeta({
     padding:25px;
     margin-top:150px;
     position:relative;
-    
+
     @media all and (max-width: 991px) {
         margin-top:0px;
     }
-    
+
     @media all and (min-width: 1200px) {
         &:after {
             display: block;
@@ -231,7 +234,7 @@ definePageMeta({
             background: url("/img/group.png") center no-repeat;
             width: 387px;
             height: 405px;
-            
+
             bottom: 0;
             right: 0;
         }
