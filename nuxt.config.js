@@ -131,10 +131,8 @@ export default defineNuxtConfig({
     i18n: {
         defaultLocale: 'en',
         locales: [
-            { code: "uk", iso: "uk", file: "uk.json", flag: "/images/flag/ua.svg" },
             { code: "en", iso: "en", file: "en.json", flag: "/images/flag/en-flag.svg" },
-            { code: "ru", iso: "ru", file: "ru.json", flag: "/images/flag/ru.svg" },
-            { code: "tr", iso: "tr", file: "tr.json", flag: "/images/flag/tr.svg" }
+            { code: "ru", iso: "ru", file: "ru.json", flag: "/images/flag/ru.svg" }
         ],
         // strictMessage: false,
         compilation: {
