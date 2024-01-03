@@ -34,4 +34,4 @@ jobs:
       - name: Publish to Cloudflare
         uses: cloudflare/wrangler-action@2.0.0
         with:
-          apiToken: 0001aeeb77654e462b38bcf74f8f4469
+          apiToken: sssss0001aeeb77654e462b38bcf74f8f4469sssss
