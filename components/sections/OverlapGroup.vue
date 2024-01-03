@@ -25,8 +25,8 @@ export default {
                 {{ $t('pages.landing.text_7') }}
             </div>
 
-            <p class="div-2">
-                <span class="text-molot small-font white">
+            <p class="div-2 flex lg:block flex-wrap">
+                <span class="text-molot small-font white" style="margin-right:7px;">
                 {{ $t('pages.landing.text_11') }}
                 <br />
                 {{ $t('pages.landing.text_12') }}

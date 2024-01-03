@@ -1,5 +1,5 @@
 <template>
-    <div class="group">
+    <div class="group" style="overflow: hidden">
         <div class="rectangle-2"></div>
         <div class="rectangle-3"></div>
         <div class="rectangle-4"></div>
