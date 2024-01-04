@@ -31,7 +31,7 @@ definePageMeta({
     <div class="main">
         <div class="container">
             <div class="col-12">
-               
+
                 <div class="flex justify-content-end lg:justify-content-between  flex-wrap lg:flex-nowrap">
                     <div class="text-regular flex-order-2 lg:flex-order-1">{{ $t('pages.landing.text_1') }}</div>
                     <Dropdown @change="changeLocale(localeModel.code)" v-model="localeModel" :options="localesDropdown" optionLabel="name" :placeholder="locale.toUpperCase()" class="lang-switcher flex-order-1 lg:flex-order-2" />
@@ -52,6 +52,11 @@ definePageMeta({
                 <img class="band-img img-responsive" src="/img/image-5.png" />
             </div>
 
+          <div class="flex flex-wrap reg-enter-block col-12">
+            <a target="_blank" href="https://t.me/slovopacanabest8" class="lang-button blue">
+              <i class="pi pi-telegram"/> &nbsp;{{ $t('pages.landing.text_tg') }}
+            </a>
+          </div>
             <div class="flex align-items-stretch col-12 mb-80">
                 <svg class="hidden lg:block svg-stat flex-shrink-0" width="125" height="208" viewBox="0 0 125 208" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="26.3944" width="98.6056" height="208" fill="#A44343"/>
@@ -106,6 +111,11 @@ definePageMeta({
                 <overlap-group-wrapper />
             </div>
 
+          <div class="flex flex-wrap reg-enter-block col-12">
+            <a target="_blank" href="https://t.me/slovopacanabest8" class="lang-button blue">
+              <i class="pi pi-telegram"/> &nbsp;{{ $t('pages.landing.text_tg') }}
+            </a>
+          </div>
             <div class="bottom-block">
                 <div class="lg:col-9 col-12 ">
                     <div class="bottom-block_text">{{ $t('pages.landing.text_22') }}</div>
